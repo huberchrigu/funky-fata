@@ -1,0 +1,75 @@
+baseURL: https://funkyfata.ch/
+title: Funky Fata
+defaultContentLanguage: 'de'
+theme: eternity
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.jpg
+  subtitle: Funky Fata ist eine alternative Rockband aus Langenthal, Schweiz.
+  copyright: All rights reserved.
+  author: Christoph Huber
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        alben: 4
+        archive: 6
+        live: 2
+        default: 3
+      mobile:
+        default: 2
+        archive: 3
+        live: 1
+  socials:
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:theschizofairy@gmail.com'
+      landing: true
+    - icon: 'fab fa-facebook fa-lg'
+      url: 'https://www.facebook.com/Funky-Fata-129799748222/'
+    - icon: 'fab fa-youtube fa-lg'
+      url: 'https://www.youtube.com/watch?v=fcXucBWrnBc'
+    - icon: 'fab fa-soundcloud fa-lg'
+      url: 'https://soundcloud.com/rhcp85/sets/funky-fata-serenade-from-hell'
+    - icon: 'fab fa-lastfm fa-lg'
+      url: 'https://www.last.fm/de/music/Funky+Fata'
+  homepage: "/musik" # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - musik
+    - archive
+  bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
+  disableWelcomePageBackground: false # disables the background image on the homepage
+  plausible: '' # todo: set your plausible id.
+  disableRadius: false
+  moveIt: false  # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  musik: ":filename/"
+
+menu:
+  main:
+    - name: musik
+      url: /musik/
+      weight: 1
+    - name: alben
+      url: /tags/alben/
+      weight: 2
+    - name: live
+      url: /tags/live/
+      weight: 3
+    - name: archive
+      url: /tags/archive/
+      weight: 4
+    - name: about
+      url: /about/
+      weight: 5
