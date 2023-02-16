@@ -2,6 +2,7 @@
 weight: 3
 images:
 - /images/serenade-from-hell.jpg
+- /images/serenade-from-hell-back.jpg
 title: Serenade From Hell
 date: 2017-04-17
 tags:
